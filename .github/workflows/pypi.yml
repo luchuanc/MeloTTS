@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - 'main'
-
+env:
+  TMPDIR: /tmp  # 使用临时目录:cite[6]:cite[7]
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+    
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
